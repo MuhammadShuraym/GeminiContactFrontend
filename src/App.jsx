@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import './App.css';
 
 export default function App() {
   const [FormData, SetFormData] = useState({
@@ -34,8 +35,9 @@ export default function App() {
   }
  }
   return (
-    <div id='contact-form'>
-      <form onSubmit={handleSubmit}>
+    <div id='contact-form' className='form-container'>
+      <form onSubmit={handleSubmit} className='contact-form'>
+        <h2>Contact Us</h2>
         <div>
           <h5>Name</h5>
           <input type='text' placeholder='Enter Your Name' name='name' value={FormData.name} onChange={handleChange} required/>
